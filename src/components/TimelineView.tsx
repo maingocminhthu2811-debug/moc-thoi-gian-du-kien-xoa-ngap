@@ -170,24 +170,24 @@ export function TimelineView() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.15 }}
-                  className="mb-3"
+                  className="mb-3.5"
                 >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className={`text-lg sm:text-xl font-extrabold ${stage.yearColor}`}>
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <span className={`text-xl sm:text-2xl font-extrabold ${stage.yearColor}`}>
                       {stage.year}
                     </span>
                     {stage.badge && (
                       <motion.span
                         animate={{ scale: [1, 1.05, 1] }}
                         transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
-                        className="inline-flex items-center gap-1 text-[11px] font-bold text-cyan-800 bg-cyan-100 px-2 py-0.5 rounded-full"
+                        className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-cyan-800 bg-cyan-100 px-2.5 py-0.5 rounded-full"
                       >
-                        <Sparkles className="w-3 h-3 text-cyan-600" />
+                        <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
                         {stage.badge}
                       </motion.span>
                     )}
                   </div>
-                  <div className={`text-base font-bold ${stage.highlightColor} mt-0.5`}>
+                  <div className={`text-lg sm:text-xl font-bold ${stage.highlightColor} mt-1`}>
                     {stage.title}
                   </div>
                 </motion.div>
@@ -196,11 +196,11 @@ export function TimelineView() {
                 <motion.div
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
-                  className="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs hover:border-slate-300 hover:shadow-md transition-all"
+                  className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs hover:border-slate-300 hover:shadow-md transition-all"
                 >
                   {/* --- 2026: 3 Points --- */}
                   {stage.content.pointsList && (
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       {stage.content.pointsList.map((pt, idx) => (
                         <motion.div
                           key={idx}
@@ -209,9 +209,9 @@ export function TimelineView() {
                           viewport={{ once: true }}
                           transition={{ duration: 0.35, delay: 0.1 + idx * 0.08 }}
                           whileHover={{ scale: 1.02 }}
-                          className="p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs font-medium flex items-start gap-2 hover:border-amber-300 transition-colors"
+                          className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-sm font-medium flex items-start gap-2.5 hover:border-amber-300 transition-colors"
                         >
-                          <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                          <MapPin className="w-4.5 h-4.5 text-amber-600 shrink-0 mt-0.5" />
                           <span className="leading-snug">{pt}</span>
                         </motion.div>
                       ))}
@@ -227,19 +227,19 @@ export function TimelineView() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4 }}
-                        className="p-3.5 bg-cyan-50/70 border border-cyan-200 rounded-xl"
+                        className="p-4 bg-cyan-50/70 border border-cyan-200 rounded-xl"
                       >
-                        <div className="text-xs font-bold uppercase tracking-wider text-cyan-900 mb-1.5 flex items-center gap-1.5">
-                          <Layers className="w-3.5 h-3.5 text-cyan-700" />
+                        <div className="text-sm font-bold uppercase tracking-wider text-cyan-900 mb-2 flex items-center gap-1.5">
+                          <Layers className="w-4 h-4 text-cyan-700" />
                           <span>Hoàn thành 2 dự án trọng điểm:</span>
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-2">
+                        <div className="flex flex-col sm:flex-row gap-2.5">
                           {stage.content.projects.map((proj, idx) => (
                             <div
                               key={idx}
-                              className="flex items-center gap-1.5 text-xs font-bold text-cyan-950 bg-white px-3 py-1.5 rounded-lg border border-cyan-200 shadow-2xs"
+                              className="flex items-center gap-2 text-sm font-bold text-cyan-950 bg-white px-3.5 py-2 rounded-lg border border-cyan-200 shadow-2xs"
                             >
-                              <CheckCircle2 className="w-3.5 h-3.5 text-cyan-700 shrink-0" />
+                              <CheckCircle2 className="w-4 h-4 text-cyan-700 shrink-0" />
                               <span>{proj}</span>
                             </div>
                           ))}
@@ -247,7 +247,7 @@ export function TimelineView() {
                       </motion.div>
 
                       {/* 5 Clusters */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {stage.content.groups.map((groupName, gIdx) => (
                           <motion.div
                             key={gIdx}
@@ -256,10 +256,10 @@ export function TimelineView() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: gIdx * 0.06 }}
                             whileHover={{ scale: 1.01 }}
-                            className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-cyan-300 transition-colors flex items-center gap-2"
+                            className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-cyan-300 transition-colors flex items-center gap-2.5"
                           >
-                            <span className="w-2 h-2 rounded-full bg-cyan-600 shrink-0" />
-                            <span className="font-bold text-slate-900 text-xs sm:text-sm">
+                            <span className="w-2.5 h-2.5 rounded-full bg-cyan-600 shrink-0" />
+                            <span className="font-bold text-slate-900 text-sm sm:text-base">
                               {groupName}
                             </span>
                           </motion.div>
@@ -270,7 +270,7 @@ export function TimelineView() {
 
                   {/* --- 2028 - 2030: Yearly Breakdown --- */}
                   {stage.content.yearlyPlan && (
-                    <div className="space-y-3">
+                    <div className="space-y-3.5">
                       {stage.content.yearlyPlan.map((yearBlock, yIdx) => (
                         <motion.div
                           key={yIdx}
@@ -278,17 +278,17 @@ export function TimelineView() {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: yIdx * 0.08 }}
-                          className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-colors"
+                          className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-colors"
                         >
-                          <div className="font-bold text-emerald-800 text-xs sm:text-sm mb-2 flex items-center gap-1.5">
-                            <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
+                          <div className="font-bold text-emerald-800 text-sm sm:text-base mb-2.5 flex items-center gap-1.5">
+                            <ChevronRight className="w-4 h-4 text-emerald-600" />
                             <span>{yearBlock.year}:</span>
                           </div>
-                          <div className="flex flex-wrap gap-1.5">
+                          <div className="flex flex-wrap gap-2">
                             {yearBlock.items.map((item, iIdx) => (
                               <span
                                 key={iIdx}
-                                className="inline-block px-2.5 py-1 text-xs rounded-lg border border-slate-200 bg-white text-slate-800"
+                                className="inline-block px-3 py-1.5 text-sm rounded-lg border border-slate-200 bg-white text-slate-800 font-medium"
                               >
                                 {item}
                               </span>
