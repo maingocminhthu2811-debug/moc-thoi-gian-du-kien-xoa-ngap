@@ -35,7 +35,7 @@ const TIMELINE_DATA: TimelineStage[] = [
     bgDot: 'bg-amber-500',
     content: {
       pointsList: [
-        'Phan Văn Hớn - xã Bà Điểm',
+        'Đường Phan Văn Hớn - xã Bà Điểm',
         'Bình Quới',
         'Quốc lộ 51 giao đường Huỳnh Thúc Kháng',
       ],
@@ -53,14 +53,14 @@ const TIMELINE_DATA: TimelineStage[] = [
     bgDot: 'bg-cyan-600',
     content: {
       projects: [
-        'Dự án ngăn triều 570km²',
+        'Dự án ngăn triều 10.000 tỷ đồng',
         'Kênh Tham Lương - Bến Cát - rạch Nước Lên',
       ],
       groups: [
-        'Cụm Thảo Điền',
-        'Cụm chợ Thủ Đức',
-        'Cụm Gò Vấp cũ',
-        'Cụm Trần Xuân Soạn - Huỳnh Tấn Phát - Lê Văn Lương',
+        'Khu vực Thảo Điền',
+        'Khu vực chợ Thủ Đức',
+        'Khu vực Gò Vấp cũ',
+        'Các đường Trần Xuân Soạn - Huỳnh Tấn Phát - Lê Văn Lương',
         '8 - 9 điểm trên Quốc lộ 13 Bình Dương (trước đây)',
       ],
     },
